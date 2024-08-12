@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Departments</title>
+</head>
+<body>
+
+    <style>
+        button {
+            height: 300px;
+            width: 300px;
+        }
+    </style>
+    {% for department in departments %}
+        <a href="{% url 'emp' department.id %}"><button>{{ department.specialization }}<br>{{ department.address}}</button></a>
+        <!-- <p>{{ department.address}}<p> -->
+    {% endfor %}
+</body>
+</html>
